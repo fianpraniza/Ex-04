@@ -34,6 +34,11 @@ const run = (command, commandArgs, options = {}) => {
   }
 };
 const json = (command, commandArgs, options) => JSON.parse(run(command, commandArgs, options));
+const collection = (response, property) => {
+  if (Array.isArray(response)) return response;
+  if (Array.isArray(response?.[property])) return response[property];
+  throw new Error(`Expected a ${property} array in GitHub CLI JSON output`);
+};
 const api = (path, method = 'GET', body) => {
   const apiArgs = ['api', path, '--method', method];
   if (body !== undefined) apiArgs.push('--input', '-');
@@ -113,14 +118,14 @@ for (const ticket of tickets) {
   issueResults.push({ ...ticket, number: issue.number, url: issue.html_url });
 }
 
-const projects = dryRun ? [] : json('gh', ['project', 'list', '--owner', owner, '--limit', '100', '--format', 'json']);
+const projects = dryRun ? [] : collection(json('gh', ['project', 'list', '--owner', owner, '--limit', '100', '--format', 'json']), 'projects');
 let project = projects.find((item) => item.title === projectName);
 if (!project) {
   project = dryRun ? { number: 0 } : json('gh', ['project', 'create', '--owner', owner, '--title', projectName, '--format', 'json']);
 }
 if (!dryRun) run('gh', ['project', 'link', String(project.number), '--owner', owner, '--repo', fullRepo]);
 
-const projectFields = dryRun ? [] : json('gh', ['project', 'field-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']);
+const projectFields = dryRun ? [] : collection(json('gh', ['project', 'field-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']), 'fields');
 const fieldNames = new Set(projectFields.map((field) => field.name));
 const epicOptions = [...new Set(epics.map((epic) => epic.title))].join(',');
 if (!fieldNames.has('Learning Status')) {
@@ -130,7 +135,7 @@ if (!fieldNames.has('Epic')) {
   run('gh', ['project', 'field-create', String(project.number), '--owner', owner, '--name', 'Epic', '--data-type', 'SINGLE_SELECT', '--single-select-options', epicOptions]);
 }
 
-const projectItems = dryRun ? [] : json('gh', ['project', 'item-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']);
+const projectItems = dryRun ? [] : collection(json('gh', ['project', 'item-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']), 'items');
 const projectIssueUrls = new Set(projectItems.map((item) => item.content?.url).filter(Boolean));
 for (const issue of issueResults) {
   if (!projectIssueUrls.has(issue.url)) {
@@ -147,7 +152,7 @@ if (!dryRun) {
     milestoneCount: json('gh', ['api', `repos/${fullRepo}/milestones?state=all&per_page=100`]).filter((m) => milestones.some((expected) => milestoneTitle(expected) === m.title)).length,
     labelCount: json('gh', ['api', `repos/${fullRepo}/labels?per_page=100`]).filter((label) => labels.some((expected) => expected.name === label.name)).length,
     issueCount: json('gh', ['api', `repos/${fullRepo}/issues?state=all&per_page=100`]).filter((issue) => tickets.some((ticket) => issue.title === issueTitle(ticket))).length,
-    projectItemCount: json('gh', ['project', 'item-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']).length,
+    projectItemCount: collection(json('gh', ['project', 'item-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']), 'items').length,
     createdAt: new Date().toISOString(),
   };
   await mkdir(resolve(root, 'planning'), { recursive: true });
