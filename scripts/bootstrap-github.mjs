@@ -64,6 +64,12 @@ if (!dryRun) {
   } catch {
     run('gh', ['repo', 'create', fullRepo, visibility, '--source', '.', '--remote', 'origin', '--description', 'Evidence-driven Production ML Engineering learning system for On-Device Apple ML']);
   }
+  try {
+    run('git', ['remote', 'get-url', 'origin']);
+  } catch {
+    run('git', ['remote', 'add', 'origin', `https://github.com/${fullRepo}.git`]);
+  }
+  run('git', ['push', '--set-upstream', 'origin', 'main']);
 }
 
 const existingMilestones = dryRun ? [] : json('gh', ['api', `repos/${fullRepo}/milestones?state=all&per_page=100`]);
