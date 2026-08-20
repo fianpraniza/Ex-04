@@ -131,7 +131,7 @@ if (!dryRun) {
   }
 }
 
-const projectFields = dryRun ? [] : collection(json('gh', ['project', 'field-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']), 'fields');
+let projectFields = dryRun ? [] : collection(json('gh', ['project', 'field-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']), 'fields');
 const fieldNames = new Set(projectFields.map((field) => field.name));
 const epicOptions = [...new Set(epics.map((epic) => epic.title))].join(',');
 if (!fieldNames.has('Learning Status')) {
@@ -141,15 +141,38 @@ if (!fieldNames.has('Epic')) {
   run('gh', ['project', 'field-create', String(project.number), '--owner', owner, '--name', 'Epic', '--data-type', 'SINGLE_SELECT', '--single-select-options', epicOptions]);
 }
 
-const projectItems = dryRun ? [] : collection(json('gh', ['project', 'item-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']), 'items');
-const projectIssueUrls = new Set(projectItems.map((item) => item.content?.url).filter(Boolean));
+if (!dryRun && (projectFields.length !== fieldNames.size || !fieldNames.has('Learning Status') || !fieldNames.has('Epic'))) {
+  projectFields = collection(json('gh', ['project', 'field-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']), 'fields');
+}
+const statusField = projectFields.find((field) => field.name === 'Learning Status');
+const epicField = projectFields.find((field) => field.name === 'Epic');
+const optionId = (field, name) => field?.options?.find((option) => option.name === name)?.id;
+const statusOptions = new Map(['BACKLOG', 'READY', 'IN PROGRESS', 'BLOCKED', 'REVIEW', 'DONE'].map((name) => [name, optionId(statusField, name)]));
+const epicOptionsByName = new Map(epics.map((epic) => [epic.title, optionId(epicField, epic.title)]));
+if (!dryRun) {
+  if (!statusField?.id || [...statusOptions.values()].some((id) => !id)) throw new Error('Project Learning Status field or options could not be resolved');
+  if (!epicField?.id || [...epicOptionsByName.values()].some((id) => !id)) throw new Error('Project Epic field or options could not be resolved');
+}
+
+let projectItems = dryRun ? [] : collection(json('gh', ['project', 'item-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']), 'items');
+let projectIssueUrls = new Set(projectItems.map((item) => item.content?.url).filter(Boolean));
 for (const issue of issueResults) {
-  console.error(`[project] syncing ${issue.id}`);
   if (!projectIssueUrls.has(issue.url)) {
+    console.error(`[project] adding ${issue.id}`);
     run('gh', ['project', 'item-add', String(project.number), '--owner', owner, '--url', issue.url]);
   }
-  run('gh', ['project', 'item-edit', String(project.number), '--owner', owner, '--url', issue.url, '--field', 'Learning Status', '--value', issue.id === 'M0-001' ? 'READY' : 'BACKLOG']);
-  run('gh', ['project', 'item-edit', String(project.number), '--owner', owner, '--url', issue.url, '--field', 'Epic', '--value', issue.epic]);
+}
+if (!dryRun && [...projectIssueUrls].length < issueResults.length) {
+  projectItems = collection(json('gh', ['project', 'item-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']), 'items');
+  projectIssueUrls = new Set(projectItems.map((item) => item.content?.url).filter(Boolean));
+}
+for (const issue of issueResults) {
+  const item = projectItems.find((candidate) => candidate.content?.url === issue.url);
+  if (!dryRun && !item?.id) throw new Error(`Project item ID could not be resolved for ${issue.id}`);
+  const status = issue.id === 'M0-001' ? 'READY' : 'BACKLOG';
+  console.error(`[project] configuring ${issue.id}`);
+  if (!dryRun) run('gh', ['project', 'item-edit', '--id', item.id, '--project-id', project.id, '--field-id', statusField.id, '--single-select-option-id', statusOptions.get(status)]);
+  if (!dryRun) run('gh', ['project', 'item-edit', '--id', item.id, '--project-id', project.id, '--field-id', epicField.id, '--single-select-option-id', epicOptionsByName.get(issue.epic)]);
 }
 
 if (!dryRun) {
