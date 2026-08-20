@@ -123,7 +123,13 @@ let project = projects.find((item) => item.title === projectName);
 if (!project) {
   project = dryRun ? { number: 0 } : json('gh', ['project', 'create', '--owner', owner, '--title', projectName, '--format', 'json']);
 }
-if (!dryRun) run('gh', ['project', 'link', String(project.number), '--owner', owner, '--repo', fullRepo]);
+if (!dryRun) {
+  try {
+    run('gh', ['project', 'link', String(project.number), '--owner', owner, '--repo', fullRepo]);
+  } catch (error) {
+    if (!/already linked|already exists/i.test(error.message)) throw error;
+  }
+}
 
 const projectFields = dryRun ? [] : collection(json('gh', ['project', 'field-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']), 'fields');
 const fieldNames = new Set(projectFields.map((field) => field.name));
@@ -138,6 +144,7 @@ if (!fieldNames.has('Epic')) {
 const projectItems = dryRun ? [] : collection(json('gh', ['project', 'item-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']), 'items');
 const projectIssueUrls = new Set(projectItems.map((item) => item.content?.url).filter(Boolean));
 for (const issue of issueResults) {
+  console.error(`[project] syncing ${issue.id}`);
   if (!projectIssueUrls.has(issue.url)) {
     run('gh', ['project', 'item-add', String(project.number), '--owner', owner, '--url', issue.url]);
   }
