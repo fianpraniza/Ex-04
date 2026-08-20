@@ -1,0 +1,117 @@
+[
+  {
+    "name": "milestone:m0",
+    "color": "1D76DB",
+    "description": "M0 - Engineering Foundation"
+  },
+  {
+    "name": "milestone:m1",
+    "color": "1D76DB",
+    "description": "M1 - ML Engineering"
+  },
+  {
+    "name": "milestone:m2",
+    "color": "1D76DB",
+    "description": "M2 - Experiment Tracking & Model Lifecycle"
+  },
+  {
+    "name": "milestone:m3",
+    "color": "1D76DB",
+    "description": "M3 - Production ML / MLOps Foundation"
+  },
+  {
+    "name": "milestone:m4",
+    "color": "1D76DB",
+    "description": "M4 - Model Optimization"
+  },
+  {
+    "name": "milestone:m5",
+    "color": "1D76DB",
+    "description": "M5 - On-Device ML / Apple"
+  },
+  {
+    "name": "milestone:m6",
+    "color": "1D76DB",
+    "description": "M6 - Hard Problems"
+  },
+  {
+    "name": "milestone:m7",
+    "color": "1D76DB",
+    "description": "M7 - ML Systems"
+  },
+  {
+    "name": "milestone:m8",
+    "color": "1D76DB",
+    "description": "M8 - Advanced Apple AI"
+  },
+  {
+    "name": "type:learning",
+    "color": "C5DEF5",
+    "description": "Learning or research work"
+  },
+  {
+    "name": "type:implementation",
+    "color": "0E8A16",
+    "description": "Implementation work"
+  },
+  {
+    "name": "type:experiment",
+    "color": "FBCA04",
+    "description": "Hypothesis-driven experiment"
+  },
+  {
+    "name": "type:benchmark",
+    "color": "5319E7",
+    "description": "Measurement and benchmark work"
+  },
+  {
+    "name": "type:debug",
+    "color": "D93F0B",
+    "description": "Debugging or investigation work"
+  },
+  {
+    "name": "type:documentation",
+    "color": "0075CA",
+    "description": "Documentation work"
+  },
+  {
+    "name": "type:reflection",
+    "color": "BFDADC",
+    "description": "Reflection work"
+  },
+  {
+    "name": "status:blocked",
+    "color": "B60205",
+    "description": "Blocked"
+  },
+  {
+    "name": "status:in-progress",
+    "color": "FBCA04",
+    "description": "In progress"
+  },
+  {
+    "name": "status:review",
+    "color": "5319E7",
+    "description": "Ready for review"
+  },
+  {
+    "name": "priority:high",
+    "color": "B60205",
+    "description": "High priority"
+  },
+  {
+    "name": "priority:medium",
+    "color": "FBCA04",
+    "description": "Medium priority"
+  },
+  {
+    "name": "priority:low",
+    "color": "0E8A16",
+    "description": "Low priority"
+  },
+  {
+    "name": "evidence-required",
+    "color": "006B75",
+    "description": "Completion requires linked evidence"
+  }
+]

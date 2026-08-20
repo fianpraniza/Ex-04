@@ -1,0 +1,17 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+mlruns/
+artifacts/
+models/
+data/raw/
+data/processed/
+*.mlmodel
+*.mlpackage
+DerivedData/
