@@ -42,10 +42,10 @@ The PyTorch/framework-to-Core-ML-to-iOS-to-physical-device pipeline works and si
 
 ## Related Issues
 
-- [M5-001 - Convert the selected model to Core ML](../planning/tickets.md#m5-001)
-- [M5-002 - Validate Core ML prediction parity](../planning/tickets.md#m5-002)
-- [M5-003 - Integrate Core ML and Vision into an iOS inference flow](../planning/tickets.md#m5-003)
-- [M5-004 - Measure inference on a physical Apple device](../planning/tickets.md#m5-004)
-- [M5-005 - Publish the Apple deployment evidence package](../planning/tickets.md#m5-005)
-- [CAP-005 - Convert the capstone model to Core ML](../planning/tickets.md#cap-005)
-- [CAP-006 - Integrate capstone inference into an iOS camera flow](../planning/tickets.md#cap-006)
+- [M5-001 — Convert the selected model to Core ML](../planning/tickets.md#m5-001)
+- [M5-002 — Validate Core ML prediction parity](../planning/tickets.md#m5-002)
+- [M5-003 — Integrate Core ML and Vision into an iOS inference flow](../planning/tickets.md#m5-003)
+- [M5-004 — Measure inference on a physical Apple device](../planning/tickets.md#m5-004)
+- [M5-005 — Publish the Apple deployment evidence package](../planning/tickets.md#m5-005)
+- [CAP-005 — Convert the capstone model to Core ML](../planning/tickets.md#cap-005)
+- [CAP-006 — Integrate capstone inference into an iOS camera flow](../planning/tickets.md#cap-006)

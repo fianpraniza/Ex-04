@@ -42,8 +42,8 @@ One advanced option is evaluated with evidence, trade-offs, and a documented dec
 
 ## Related Issues
 
-- [M8-001 - Define a bounded advanced Apple AI investigation](../planning/tickets.md#m8-001)
-- [M8-002 - Prototype the selected Apple Silicon or PyTorch ecosystem workflow](../planning/tickets.md#m8-002)
-- [M8-003 - Profile the advanced workflow or tooling path](../planning/tickets.md#m8-003)
-- [M8-004 - Test one advanced optimization only when justified](../planning/tickets.md#m8-004)
-- [M8-005 - Publish the advanced Apple AI adoption decision](../planning/tickets.md#m8-005)
+- [M8-001 — Define a bounded advanced Apple AI investigation](../planning/tickets.md#m8-001)
+- [M8-002 — Prototype the selected Apple Silicon or PyTorch ecosystem workflow](../planning/tickets.md#m8-002)
+- [M8-003 — Profile the advanced workflow or tooling path](../planning/tickets.md#m8-003)
+- [M8-004 — Test one advanced optimization only when justified](../planning/tickets.md#m8-004)
+- [M8-005 — Publish the advanced Apple AI adoption decision](../planning/tickets.md#m8-005)

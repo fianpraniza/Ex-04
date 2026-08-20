@@ -42,11 +42,11 @@ Dataset and split reproducible; three approaches compared; metrics include quali
 
 ## Related Issues
 
-- [M1-001 - Create a versioned dataset contract and reproducible split](../planning/tickets.md#m1-001)
-- [M1-002 - Establish candidate-model baselines](../planning/tickets.md#m1-002)
-- [M1-003 - Compare three model approaches with engineering metrics](../planning/tickets.md#m1-003)
-- [M1-004 - Analyze failure cases and select a model](../planning/tickets.md#m1-004)
-- [M1-005 - Publish the ML engineering decision record](../planning/tickets.md#m1-005)
-- [CAP-001 - Define the shrimp dataset and capstone baseline](../planning/tickets.md#cap-001)
-- [CAP-002 - Train candidate shrimp-detection models](../planning/tickets.md#cap-002)
-- [CAP-003 - Select the capstone model](../planning/tickets.md#cap-003)
+- [M1-001 — Create a versioned dataset contract and reproducible split](../planning/tickets.md#m1-001)
+- [M1-002 — Establish candidate-model baselines](../planning/tickets.md#m1-002)
+- [M1-003 — Compare three model approaches with engineering metrics](../planning/tickets.md#m1-003)
+- [M1-004 — Analyze failure cases and select a model](../planning/tickets.md#m1-004)
+- [M1-005 — Publish the ML engineering decision record](../planning/tickets.md#m1-005)
+- [CAP-001 — Define the shrimp dataset and capstone baseline](../planning/tickets.md#cap-001)
+- [CAP-002 — Train candidate shrimp-detection models](../planning/tickets.md#cap-002)
+- [CAP-003 — Select the capstone model](../planning/tickets.md#cap-003)

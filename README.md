@@ -49,6 +49,6 @@ Proceed in order: **M0 -> M1 -> M2 -> M3 -> M4 -> M5 -> M6 -> M7 -> M8**, then c
 
 ## Current Starting Ticket
 
-**Start with: [M0-001 - Establish the production-style repository baseline](planning/tickets.md#m0-001).**
+**Start with: [M0-001 — Establish the production-style repository baseline](planning/tickets.md#m0-001).**
 
 The current state is maintained in [agent/current-context.md](agent/current-context.md).

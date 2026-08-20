@@ -4,7 +4,7 @@ This is the canonical local source for the GitHub issue bodies. The GitHub boots
 
 <a id="m0-001"></a>
 
-## M0-001 - Establish the production-style repository baseline
+## M0-001 — Establish the production-style repository baseline
 
 **Milestone:** M0  
 **Epic:** Repository Foundation  
@@ -54,7 +54,7 @@ Repository Foundation
 
 <a id="m0-002"></a>
 
-## M0-002 - Build a configuration-driven training CLI
+## M0-002 — Build a configuration-driven training CLI
 
 **Milestone:** M0  
 **Epic:** Repository Foundation  
@@ -104,7 +104,7 @@ Repository Foundation
 
 <a id="m0-003"></a>
 
-## M0-003 - Implement reproducible evaluation and inference commands
+## M0-003 — Implement reproducible evaluation and inference commands
 
 **Milestone:** M0  
 **Epic:** Repository Foundation  
@@ -154,7 +154,7 @@ Repository Foundation
 
 <a id="m0-004"></a>
 
-## M0-004 - Add automated verification and engineering documentation
+## M0-004 — Add automated verification and engineering documentation
 
 **Milestone:** M0  
 **Epic:** Quality and Delivery  
@@ -204,7 +204,7 @@ Quality and Delivery
 
 <a id="m0-005"></a>
 
-## M0-005 - Run the engineering reproducibility gate
+## M0-005 — Run the engineering reproducibility gate
 
 **Milestone:** M0  
 **Epic:** Quality and Delivery  
@@ -254,7 +254,7 @@ Quality and Delivery
 
 <a id="m1-001"></a>
 
-## M1-001 - Create a versioned dataset contract and reproducible split
+## M1-001 — Create a versioned dataset contract and reproducible split
 
 **Milestone:** M1  
 **Epic:** Data and Baselines  
@@ -304,7 +304,7 @@ Data and Baselines
 
 <a id="m1-002"></a>
 
-## M1-002 - Establish candidate-model baselines
+## M1-002 — Establish candidate-model baselines
 
 **Milestone:** M1  
 **Epic:** Data and Baselines  
@@ -354,7 +354,7 @@ Data and Baselines
 
 <a id="m1-003"></a>
 
-## M1-003 - Compare three model approaches with engineering metrics
+## M1-003 — Compare three model approaches with engineering metrics
 
 **Milestone:** M1  
 **Epic:** Model Selection  
@@ -404,7 +404,7 @@ Model Selection
 
 <a id="m1-004"></a>
 
-## M1-004 - Analyze failure cases and select a model
+## M1-004 — Analyze failure cases and select a model
 
 **Milestone:** M1  
 **Epic:** Model Selection  
@@ -454,7 +454,7 @@ Model Selection
 
 <a id="m1-005"></a>
 
-## M1-005 - Publish the ML engineering decision record
+## M1-005 — Publish the ML engineering decision record
 
 **Milestone:** M1  
 **Epic:** Model Selection  
@@ -504,7 +504,7 @@ Model Selection
 
 <a id="m2-001"></a>
 
-## M2-001 - Design the experiment and artifact tracking contract
+## M2-001 — Design the experiment and artifact tracking contract
 
 **Milestone:** M2  
 **Epic:** Tracking Foundation  
@@ -554,7 +554,7 @@ Tracking Foundation
 
 <a id="m2-002"></a>
 
-## M2-002 - Track training runs and artifacts
+## M2-002 — Track training runs and artifacts
 
 **Milestone:** M2  
 **Epic:** Tracking Foundation  
@@ -604,7 +604,7 @@ Tracking Foundation
 
 <a id="m2-003"></a>
 
-## M2-003 - Register candidate models and document selection
+## M2-003 — Register candidate models and document selection
 
 **Milestone:** M2  
 **Epic:** Model Lineage  
@@ -654,7 +654,7 @@ Model Lineage
 
 <a id="m2-004"></a>
 
-## M2-004 - Reproduce the selected model from lineage
+## M2-004 — Reproduce the selected model from lineage
 
 **Milestone:** M2  
 **Epic:** Model Lineage  
@@ -704,7 +704,7 @@ Model Lineage
 
 <a id="m2-005"></a>
 
-## M2-005 - Complete the model lifecycle audit
+## M2-005 — Complete the model lifecycle audit
 
 **Milestone:** M2  
 **Epic:** Model Lineage  
@@ -754,7 +754,7 @@ Model Lineage
 
 <a id="m3-001"></a>
 
-## M3-001 - Serve the selected model through a versioned FastAPI contract
+## M3-001 — Serve the selected model through a versioned FastAPI contract
 
 **Milestone:** M3  
 **Epic:** Serving and Packaging  
@@ -804,7 +804,7 @@ Serving and Packaging
 
 <a id="m3-002"></a>
 
-## M3-002 - Containerize reproducible inference service
+## M3-002 — Containerize reproducible inference service
 
 **Milestone:** M3  
 **Epic:** Serving and Packaging  
@@ -854,7 +854,7 @@ Serving and Packaging
 
 <a id="m3-003"></a>
 
-## M3-003 - Add CI verification for service and model contract
+## M3-003 — Add CI verification for service and model contract
 
 **Milestone:** M3  
 **Epic:** Operational Readiness  
@@ -904,7 +904,7 @@ Operational Readiness
 
 <a id="m3-004"></a>
 
-## M3-004 - Implement logging, health, monitoring hooks, and rollback procedure
+## M3-004 — Implement logging, health, monitoring hooks, and rollback procedure
 
 **Milestone:** M3  
 **Epic:** Operational Readiness  
@@ -954,7 +954,7 @@ Operational Readiness
 
 <a id="m3-005"></a>
 
-## M3-005 - Run the production ML readiness demonstration
+## M3-005 — Run the production ML readiness demonstration
 
 **Milestone:** M3  
 **Epic:** Operational Readiness  
@@ -1004,7 +1004,7 @@ Operational Readiness
 
 <a id="m4-001"></a>
 
-## M4-001 - Establish the optimization baseline
+## M4-001 — Establish the optimization baseline
 
 **Milestone:** M4  
 **Epic:** Optimization Baseline  
@@ -1054,7 +1054,7 @@ Optimization Baseline
 
 <a id="m4-002"></a>
 
-## M4-002 - Create and benchmark an FP16 model variant
+## M4-002 — Create and benchmark an FP16 model variant
 
 **Milestone:** M4  
 **Epic:** Optimization Baseline  
@@ -1104,7 +1104,7 @@ Optimization Baseline
 
 <a id="m4-003"></a>
 
-## M4-003 - Implement and benchmark INT8 quantization
+## M4-003 — Implement and benchmark INT8 quantization
 
 **Milestone:** M4  
 **Epic:** Quantization and Selection  
@@ -1154,7 +1154,7 @@ Quantization and Selection
 
 <a id="m4-004"></a>
 
-## M4-004 - Evaluate one additional optimization strategy
+## M4-004 — Evaluate one additional optimization strategy
 
 **Milestone:** M4  
 **Epic:** Quantization and Selection  
@@ -1204,7 +1204,7 @@ Quantization and Selection
 
 <a id="m4-005"></a>
 
-## M4-005 - Select the optimization strategy for Apple deployment
+## M4-005 — Select the optimization strategy for Apple deployment
 
 **Milestone:** M4  
 **Epic:** Quantization and Selection  
@@ -1254,7 +1254,7 @@ Quantization and Selection
 
 <a id="m5-001"></a>
 
-## M5-001 - Convert the selected model to Core ML
+## M5-001 — Convert the selected model to Core ML
 
 **Milestone:** M5  
 **Epic:** Core ML Conversion  
@@ -1304,7 +1304,7 @@ Core ML Conversion
 
 <a id="m5-002"></a>
 
-## M5-002 - Validate Core ML prediction parity
+## M5-002 — Validate Core ML prediction parity
 
 **Milestone:** M5  
 **Epic:** Core ML Conversion  
@@ -1354,7 +1354,7 @@ Core ML Conversion
 
 <a id="m5-003"></a>
 
-## M5-003 - Integrate Core ML and Vision into an iOS inference flow
+## M5-003 — Integrate Core ML and Vision into an iOS inference flow
 
 **Milestone:** M5  
 **Epic:** iOS Integration  
@@ -1404,7 +1404,7 @@ iOS Integration
 
 <a id="m5-004"></a>
 
-## M5-004 - Measure inference on a physical Apple device
+## M5-004 — Measure inference on a physical Apple device
 
 **Milestone:** M5  
 **Epic:** iOS Integration  
@@ -1454,7 +1454,7 @@ iOS Integration
 
 <a id="m5-005"></a>
 
-## M5-005 - Publish the Apple deployment evidence package
+## M5-005 — Publish the Apple deployment evidence package
 
 **Milestone:** M5  
 **Epic:** iOS Integration  
@@ -1504,7 +1504,7 @@ iOS Integration
 
 <a id="m6-001"></a>
 
-## M6-001 - Build a deployment failure-case suite
+## M6-001 — Build a deployment failure-case suite
 
 **Milestone:** M6  
 **Epic:** Failure Reproduction  
@@ -1554,7 +1554,7 @@ Failure Reproduction
 
 <a id="m6-002"></a>
 
-## M6-002 - Investigate an unsupported operator or conversion failure
+## M6-002 — Investigate an unsupported operator or conversion failure
 
 **Milestone:** M6  
 **Epic:** Failure Reproduction  
@@ -1604,7 +1604,7 @@ Failure Reproduction
 
 <a id="m6-003"></a>
 
-## M6-003 - Investigate an accuracy degradation after optimization or conversion
+## M6-003 — Investigate an accuracy degradation after optimization or conversion
 
 **Milestone:** M6  
 **Epic:** Mitigation and Casebook  
@@ -1654,7 +1654,7 @@ Mitigation and Casebook
 
 <a id="m6-004"></a>
 
-## M6-004 - Mitigate an observed latency or memory failure
+## M6-004 — Mitigate an observed latency or memory failure
 
 **Milestone:** M6  
 **Epic:** Mitigation and Casebook  
@@ -1704,7 +1704,7 @@ Mitigation and Casebook
 
 <a id="m6-005"></a>
 
-## M6-005 - Publish the deployment troubleshooting casebook
+## M6-005 — Publish the deployment troubleshooting casebook
 
 **Milestone:** M6  
 **Epic:** Mitigation and Casebook  
@@ -1754,7 +1754,7 @@ Mitigation and Casebook
 
 <a id="m7-001"></a>
 
-## M7-001 - Instrument the full inference pipeline
+## M7-001 — Instrument the full inference pipeline
 
 **Milestone:** M7  
 **Epic:** End-to-End Profiling  
@@ -1804,7 +1804,7 @@ End-to-End Profiling
 
 <a id="m7-002"></a>
 
-## M7-002 - Profile CPU, GPU, and Neural Engine execution paths
+## M7-002 — Profile CPU, GPU, and Neural Engine execution paths
 
 **Milestone:** M7  
 **Epic:** End-to-End Profiling  
@@ -1854,7 +1854,7 @@ End-to-End Profiling
 
 <a id="m7-003"></a>
 
-## M7-003 - Optimize preprocessing and postprocessing bottlenecks
+## M7-003 — Optimize preprocessing and postprocessing bottlenecks
 
 **Milestone:** M7  
 **Epic:** Pipeline Optimization  
@@ -1904,7 +1904,7 @@ Pipeline Optimization
 
 <a id="m7-004"></a>
 
-## M7-004 - Evaluate scheduling, loading, and caching strategy
+## M7-004 — Evaluate scheduling, loading, and caching strategy
 
 **Milestone:** M7  
 **Epic:** Pipeline Optimization  
@@ -1954,7 +1954,7 @@ Pipeline Optimization
 
 <a id="m7-005"></a>
 
-## M7-005 - Publish the ML systems performance decision
+## M7-005 — Publish the ML systems performance decision
 
 **Milestone:** M7  
 **Epic:** Pipeline Optimization  
@@ -2004,7 +2004,7 @@ Pipeline Optimization
 
 <a id="m8-001"></a>
 
-## M8-001 - Define a bounded advanced Apple AI investigation
+## M8-001 — Define a bounded advanced Apple AI investigation
 
 **Milestone:** M8  
 **Epic:** Elective Exploration  
@@ -2054,7 +2054,7 @@ Elective Exploration
 
 <a id="m8-002"></a>
 
-## M8-002 - Prototype the selected Apple Silicon or PyTorch ecosystem workflow
+## M8-002 — Prototype the selected Apple Silicon or PyTorch ecosystem workflow
 
 **Milestone:** M8  
 **Epic:** Elective Exploration  
@@ -2104,7 +2104,7 @@ Elective Exploration
 
 <a id="m8-003"></a>
 
-## M8-003 - Profile the advanced workflow or tooling path
+## M8-003 — Profile the advanced workflow or tooling path
 
 **Milestone:** M8  
 **Epic:** Advanced Optimization  
@@ -2154,7 +2154,7 @@ Advanced Optimization
 
 <a id="m8-004"></a>
 
-## M8-004 - Test one advanced optimization only when justified
+## M8-004 — Test one advanced optimization only when justified
 
 **Milestone:** M8  
 **Epic:** Advanced Optimization  
@@ -2204,7 +2204,7 @@ Advanced Optimization
 
 <a id="m8-005"></a>
 
-## M8-005 - Publish the advanced Apple AI adoption decision
+## M8-005 — Publish the advanced Apple AI adoption decision
 
 **Milestone:** M8  
 **Epic:** Advanced Optimization  
@@ -2254,7 +2254,7 @@ Advanced Optimization
 
 <a id="cap-001"></a>
 
-## CAP-001 - Define the shrimp dataset and capstone baseline
+## CAP-001 — Define the shrimp dataset and capstone baseline
 
 **Milestone:** M1  
 **Epic:** Capstone: Real-time Shrimp Detection on iPhone  
@@ -2304,7 +2304,7 @@ Capstone: Real-time Shrimp Detection on iPhone
 
 <a id="cap-002"></a>
 
-## CAP-002 - Train candidate shrimp-detection models
+## CAP-002 — Train candidate shrimp-detection models
 
 **Milestone:** M1  
 **Epic:** Capstone: Real-time Shrimp Detection on iPhone  
@@ -2354,7 +2354,7 @@ Capstone: Real-time Shrimp Detection on iPhone
 
 <a id="cap-003"></a>
 
-## CAP-003 - Select the capstone model
+## CAP-003 — Select the capstone model
 
 **Milestone:** M1  
 **Epic:** Capstone: Real-time Shrimp Detection on iPhone  
@@ -2404,7 +2404,7 @@ Capstone: Real-time Shrimp Detection on iPhone
 
 <a id="cap-004"></a>
 
-## CAP-004 - Optimize the capstone model
+## CAP-004 — Optimize the capstone model
 
 **Milestone:** M4  
 **Epic:** Capstone: Real-time Shrimp Detection on iPhone  
@@ -2454,7 +2454,7 @@ Capstone: Real-time Shrimp Detection on iPhone
 
 <a id="cap-005"></a>
 
-## CAP-005 - Convert the capstone model to Core ML
+## CAP-005 — Convert the capstone model to Core ML
 
 **Milestone:** M5  
 **Epic:** Capstone: Real-time Shrimp Detection on iPhone  
@@ -2504,7 +2504,7 @@ Capstone: Real-time Shrimp Detection on iPhone
 
 <a id="cap-006"></a>
 
-## CAP-006 - Integrate capstone inference into an iOS camera flow
+## CAP-006 — Integrate capstone inference into an iOS camera flow
 
 **Milestone:** M5  
 **Epic:** Capstone: Real-time Shrimp Detection on iPhone  
@@ -2554,7 +2554,7 @@ Capstone: Real-time Shrimp Detection on iPhone
 
 <a id="cap-007"></a>
 
-## CAP-007 - Profile the capstone on a physical iPhone
+## CAP-007 — Profile the capstone on a physical iPhone
 
 **Milestone:** M7  
 **Epic:** Capstone: Real-time Shrimp Detection on iPhone  
@@ -2604,7 +2604,7 @@ Capstone: Real-time Shrimp Detection on iPhone
 
 <a id="cap-008"></a>
 
-## CAP-008 - Benchmark real-time shrimp detection trade-offs
+## CAP-008 — Benchmark real-time shrimp detection trade-offs
 
 **Milestone:** M7  
 **Epic:** Capstone: Real-time Shrimp Detection on iPhone  
@@ -2654,7 +2654,7 @@ Capstone: Real-time Shrimp Detection on iPhone
 
 <a id="cap-009"></a>
 
-## CAP-009 - Document capstone production trade-offs
+## CAP-009 — Document capstone production trade-offs
 
 **Milestone:** M3  
 **Epic:** Capstone: Real-time Shrimp Detection on iPhone  
@@ -2704,7 +2704,7 @@ Capstone: Real-time Shrimp Detection on iPhone
 
 <a id="cap-010"></a>
 
-## CAP-010 - Pass the final production gate
+## CAP-010 — Pass the final production gate
 
 **Milestone:** M7  
 **Epic:** Capstone: Real-time Shrimp Detection on iPhone  

@@ -1,6 +1,6 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
-import { milestones, tickets, epics, labels, projectName, issueBody } from './lib/learning-system-data.mjs';
+import { milestones, tickets, epics, labels, projectName, issueBody, issueTitle } from './lib/learning-system-data.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const write = async (relative, content) => {
@@ -10,7 +10,7 @@ const write = async (relative, content) => {
 };
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const milestonesById = new Map(milestones.map((m) => [m.id, m]));
-const issueLinks = (id) => tickets.filter((t) => t.milestone === id || (t.id.startsWith('CAP-') && t.milestone === id)).map((t) => `- [${t.id} - ${t.action}](../planning/tickets.md#${slug(t.id)})`).join('\n');
+const issueLinks = (id) => tickets.filter((t) => t.milestone === id || (t.id.startsWith('CAP-') && t.milestone === id)).map((t) => `- [${issueTitle(t)}](../planning/tickets.md#${slug(t.id)})`).join('\n');
 
 await write('.gitignore', '.DS_Store\n.env\n.venv/\n__pycache__/\n*.py[cod]\n.pytest_cache/\n.mypy_cache/\n.coverage\nhtmlcov/\nmlruns/\nartifacts/\nmodels/\ndata/raw/\ndata/processed/\n*.mlmodel\n*.mlpackage\nDerivedData/');
 
@@ -57,7 +57,7 @@ Proceed in order: **M0 -> M1 -> M2 -> M3 -> M4 -> M5 -> M6 -> M7 -> M8**, then c
 
 ## Current Starting Ticket
 
-**Start with: [M0-001 - Establish the production-style repository baseline](planning/tickets.md#m0-001).**
+**Start with: [M0-001 — Establish the production-style repository baseline](planning/tickets.md#m0-001).**
 
 The current state is maintained in [agent/current-context.md](agent/current-context.md).`);
 
@@ -154,7 +154,7 @@ Dataset -> Dataset Version -> Model Experiments -> Model Selection -> Optimizati
 
 ## Capstone Tickets
 
-${tickets.filter((t) => t.id.startsWith('CAP-')).map((t) => `- [${t.id} - ${t.action}](../planning/tickets.md#${slug(t.id)}) (${t.milestone})`).join('\n')}`);
+${tickets.filter((t) => t.id.startsWith('CAP-')).map((t) => `- [${issueTitle(t)}](../planning/tickets.md#${slug(t.id)}) (${t.milestone})`).join('\n')}`);
 
 await write('projects/production-gate.md', `# Production Gate
 
@@ -278,7 +278,7 @@ Repository Foundation
 
 ## Current Ticket
 
-M0-001 - Establish the production-style repository baseline
+M0-001 — Establish the production-style repository baseline
 
 ## Current Project
 
@@ -323,12 +323,12 @@ for (const [name, content] of Object.entries(protocols)) await write(`agent/prot
 
 await write('planning/epics.md', `# Epic Map
 
-${epics.map((e) => `## ${e.milestone} - ${e.title}\n\n${tickets.filter((t) => t.milestone === e.milestone && t.epic === e.title).map((t) => `- [${t.id} - ${t.action}](tickets.md#${slug(t.id)})`).join('\n')}`).join('\n\n')}`);
+${epics.map((e) => `## ${e.milestone} - ${e.title}\n\n${tickets.filter((t) => t.milestone === e.milestone && t.epic === e.title).map((t) => `- [${issueTitle(t)}](tickets.md#${slug(t.id)})`).join('\n')}`).join('\n\n')}`);
 await write('planning/tickets.md', `# Ticket Catalog
 
 This is the canonical local source for the GitHub issue bodies. The GitHub bootstrap uses the same data module to create issues, labels, milestones, and Project items.
 
-${tickets.map((t) => `<a id="${slug(t.id)}"></a>\n\n## ${t.id} - ${t.action}\n\n**Milestone:** ${t.milestone}  \n**Epic:** ${t.epic}  \n**Type:** ${t.type}  \n**Priority:** ${t.priority}\n\n${issueBody(t)}`).join('\n\n---\n\n')}`);
+${tickets.map((t) => `<a id="${slug(t.id)}"></a>\n\n## ${issueTitle(t)}\n\n**Milestone:** ${t.milestone}  \n**Epic:** ${t.epic}  \n**Type:** ${t.type}  \n**Priority:** ${t.priority}\n\n${issueBody(t)}`).join('\n\n---\n\n')}`);
 await write('planning/github-bootstrap-status.md', `# GitHub Bootstrap Status
 
 ## Current status

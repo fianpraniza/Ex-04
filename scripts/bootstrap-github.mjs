@@ -3,7 +3,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync } from 'node:fs';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { basename, resolve } from 'node:path';
-import { labels, milestones, tickets, epics, projectName, issueBody } from './lib/learning-system-data.mjs';
+import { labels, milestones, tickets, epics, projectName, issueBody, issueTitle } from './lib/learning-system-data.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const args = process.argv.slice(2);
@@ -93,7 +93,7 @@ const existingIssues = dryRun ? [] : json('gh', ['api', `repos/${fullRepo}/issue
 const issuesByTitle = new Map(existingIssues.filter((issue) => !issue.pull_request).map((issue) => [issue.title, issue]));
 const issueResults = [];
 for (const ticket of tickets) {
-  const title = `${ticket.id} - ${ticket.action}`;
+  const title = issueTitle(ticket);
   let issue = issuesByTitle.get(title);
   const wantedLabels = [`milestone:${ticket.milestone.toLowerCase()}`, `type:${ticket.type}`, `priority:${ticket.priority}`, 'evidence-required'];
   if (!issue) {
@@ -146,7 +146,7 @@ if (!dryRun) {
     project: { number: project.number, title: projectName },
     milestoneCount: json('gh', ['api', `repos/${fullRepo}/milestones?state=all&per_page=100`]).filter((m) => milestones.some((expected) => milestoneTitle(expected) === m.title)).length,
     labelCount: json('gh', ['api', `repos/${fullRepo}/labels?per_page=100`]).filter((label) => labels.some((expected) => expected.name === label.name)).length,
-    issueCount: json('gh', ['api', `repos/${fullRepo}/issues?state=all&per_page=100`]).filter((issue) => tickets.some((ticket) => issue.title === `${ticket.id} - ${ticket.action}`)).length,
+    issueCount: json('gh', ['api', `repos/${fullRepo}/issues?state=all&per_page=100`]).filter((issue) => tickets.some((ticket) => issue.title === issueTitle(ticket))).length,
     projectItemCount: json('gh', ['project', 'item-list', String(project.number), '--owner', owner, '--limit', '100', '--format', 'json']).length,
     createdAt: new Date().toISOString(),
   };

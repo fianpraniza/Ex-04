@@ -42,8 +42,8 @@ Every selected model answers which dataset, code version, parameters, experiment
 
 ## Related Issues
 
-- [M2-001 - Design the experiment and artifact tracking contract](../planning/tickets.md#m2-001)
-- [M2-002 - Track training runs and artifacts](../planning/tickets.md#m2-002)
-- [M2-003 - Register candidate models and document selection](../planning/tickets.md#m2-003)
-- [M2-004 - Reproduce the selected model from lineage](../planning/tickets.md#m2-004)
-- [M2-005 - Complete the model lifecycle audit](../planning/tickets.md#m2-005)
+- [M2-001 — Design the experiment and artifact tracking contract](../planning/tickets.md#m2-001)
+- [M2-002 — Track training runs and artifacts](../planning/tickets.md#m2-002)
+- [M2-003 — Register candidate models and document selection](../planning/tickets.md#m2-003)
+- [M2-004 — Reproduce the selected model from lineage](../planning/tickets.md#m2-004)
+- [M2-005 — Complete the model lifecycle audit](../planning/tickets.md#m2-005)

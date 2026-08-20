@@ -42,11 +42,11 @@ Input, preprocessing, inference, postprocessing, and UI costs are measured; a bo
 
 ## Related Issues
 
-- [M7-001 - Instrument the full inference pipeline](../planning/tickets.md#m7-001)
-- [M7-002 - Profile CPU, GPU, and Neural Engine execution paths](../planning/tickets.md#m7-002)
-- [M7-003 - Optimize preprocessing and postprocessing bottlenecks](../planning/tickets.md#m7-003)
-- [M7-004 - Evaluate scheduling, loading, and caching strategy](../planning/tickets.md#m7-004)
-- [M7-005 - Publish the ML systems performance decision](../planning/tickets.md#m7-005)
-- [CAP-007 - Profile the capstone on a physical iPhone](../planning/tickets.md#cap-007)
-- [CAP-008 - Benchmark real-time shrimp detection trade-offs](../planning/tickets.md#cap-008)
-- [CAP-010 - Pass the final production gate](../planning/tickets.md#cap-010)
+- [M7-001 — Instrument the full inference pipeline](../planning/tickets.md#m7-001)
+- [M7-002 — Profile CPU, GPU, and Neural Engine execution paths](../planning/tickets.md#m7-002)
+- [M7-003 — Optimize preprocessing and postprocessing bottlenecks](../planning/tickets.md#m7-003)
+- [M7-004 — Evaluate scheduling, loading, and caching strategy](../planning/tickets.md#m7-004)
+- [M7-005 — Publish the ML systems performance decision](../planning/tickets.md#m7-005)
+- [CAP-007 — Profile the capstone on a physical iPhone](../planning/tickets.md#cap-007)
+- [CAP-008 — Benchmark real-time shrimp detection trade-offs](../planning/tickets.md#cap-008)
+- [CAP-010 — Pass the final production gate](../planning/tickets.md#cap-010)

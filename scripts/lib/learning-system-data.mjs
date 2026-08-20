@@ -1,4 +1,5 @@
 export const projectName = 'Production ML Engineering - Learning System';
+export const issueTitle = (item) => `${item.id} — ${item.action}`;
 
 export const milestones = [
   {

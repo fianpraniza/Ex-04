@@ -42,9 +42,9 @@ FP32, FP16, INT8, and optimized variants are compared on size, accuracy, latency
 
 ## Related Issues
 
-- [M4-001 - Establish the optimization baseline](../planning/tickets.md#m4-001)
-- [M4-002 - Create and benchmark an FP16 model variant](../planning/tickets.md#m4-002)
-- [M4-003 - Implement and benchmark INT8 quantization](../planning/tickets.md#m4-003)
-- [M4-004 - Evaluate one additional optimization strategy](../planning/tickets.md#m4-004)
-- [M4-005 - Select the optimization strategy for Apple deployment](../planning/tickets.md#m4-005)
-- [CAP-004 - Optimize the capstone model](../planning/tickets.md#cap-004)
+- [M4-001 — Establish the optimization baseline](../planning/tickets.md#m4-001)
+- [M4-002 — Create and benchmark an FP16 model variant](../planning/tickets.md#m4-002)
+- [M4-003 — Implement and benchmark INT8 quantization](../planning/tickets.md#m4-003)
+- [M4-004 — Evaluate one additional optimization strategy](../planning/tickets.md#m4-004)
+- [M4-005 — Select the optimization strategy for Apple deployment](../planning/tickets.md#m4-005)
+- [CAP-004 — Optimize the capstone model](../planning/tickets.md#cap-004)

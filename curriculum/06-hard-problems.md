@@ -42,8 +42,8 @@ At least two non-happy-path problems follow Problem to Limitation and include re
 
 ## Related Issues
 
-- [M6-001 - Build a deployment failure-case suite](../planning/tickets.md#m6-001)
-- [M6-002 - Investigate an unsupported operator or conversion failure](../planning/tickets.md#m6-002)
-- [M6-003 - Investigate an accuracy degradation after optimization or conversion](../planning/tickets.md#m6-003)
-- [M6-004 - Mitigate an observed latency or memory failure](../planning/tickets.md#m6-004)
-- [M6-005 - Publish the deployment troubleshooting casebook](../planning/tickets.md#m6-005)
+- [M6-001 — Build a deployment failure-case suite](../planning/tickets.md#m6-001)
+- [M6-002 — Investigate an unsupported operator or conversion failure](../planning/tickets.md#m6-002)
+- [M6-003 — Investigate an accuracy degradation after optimization or conversion](../planning/tickets.md#m6-003)
+- [M6-004 — Mitigate an observed latency or memory failure](../planning/tickets.md#m6-004)
+- [M6-005 — Publish the deployment troubleshooting casebook](../planning/tickets.md#m6-005)

@@ -10,7 +10,7 @@ Repository Foundation
 
 ## Current Ticket
 
-M0-001 - Establish the production-style repository baseline
+M0-001 — Establish the production-style repository baseline
 
 ## Current Project
 

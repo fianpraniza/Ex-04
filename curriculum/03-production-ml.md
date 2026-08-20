@@ -42,9 +42,9 @@ Service is tested, containerized, observable, versioned, and has a documented de
 
 ## Related Issues
 
-- [M3-001 - Serve the selected model through a versioned FastAPI contract](../planning/tickets.md#m3-001)
-- [M3-002 - Containerize reproducible inference service](../planning/tickets.md#m3-002)
-- [M3-003 - Add CI verification for service and model contract](../planning/tickets.md#m3-003)
-- [M3-004 - Implement logging, health, monitoring hooks, and rollback procedure](../planning/tickets.md#m3-004)
-- [M3-005 - Run the production ML readiness demonstration](../planning/tickets.md#m3-005)
-- [CAP-009 - Document capstone production trade-offs](../planning/tickets.md#cap-009)
+- [M3-001 — Serve the selected model through a versioned FastAPI contract](../planning/tickets.md#m3-001)
+- [M3-002 — Containerize reproducible inference service](../planning/tickets.md#m3-002)
+- [M3-003 — Add CI verification for service and model contract](../planning/tickets.md#m3-003)
+- [M3-004 — Implement logging, health, monitoring hooks, and rollback procedure](../planning/tickets.md#m3-004)
+- [M3-005 — Run the production ML readiness demonstration](../planning/tickets.md#m3-005)
+- [CAP-009 — Document capstone production trade-offs](../planning/tickets.md#cap-009)

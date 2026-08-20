@@ -1,6 +1,6 @@
 import { access, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import { milestones, tickets, labels, epics, issueBody } from './lib/learning-system-data.mjs';
+import { milestones, tickets, labels, epics, issueBody, issueTitle } from './lib/learning-system-data.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const failures = [];
@@ -23,7 +23,7 @@ for (const path of requiredPaths) {
 if (milestones.length !== 9) failures.push(`Expected 9 milestones, found ${milestones.length}`);
 if (tickets.length !== 55) failures.push(`Expected 55 tickets, found ${tickets.length}`);
 if (new Set(tickets.map((ticket) => ticket.id)).size !== tickets.length) failures.push('Duplicate ticket IDs detected');
-if (new Set(tickets.map((ticket) => `${ticket.id} - ${ticket.action}`)).size !== tickets.length) failures.push('Duplicate issue titles detected');
+if (new Set(tickets.map(issueTitle)).size !== tickets.length) failures.push('Duplicate issue titles detected');
 if (labels.length !== 23) failures.push(`Expected 23 minimal labels, found ${labels.length}`);
 if (epics.length < 18) failures.push(`Expected at least 18 milestone epics, found ${epics.length}`);
 

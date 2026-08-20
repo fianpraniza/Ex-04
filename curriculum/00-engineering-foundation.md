@@ -42,8 +42,8 @@ Cloneable; installable; training, evaluation, and inference reproducible; automa
 
 ## Related Issues
 
-- [M0-001 - Establish the production-style repository baseline](../planning/tickets.md#m0-001)
-- [M0-002 - Build a configuration-driven training CLI](../planning/tickets.md#m0-002)
-- [M0-003 - Implement reproducible evaluation and inference commands](../planning/tickets.md#m0-003)
-- [M0-004 - Add automated verification and engineering documentation](../planning/tickets.md#m0-004)
-- [M0-005 - Run the engineering reproducibility gate](../planning/tickets.md#m0-005)
+- [M0-001 — Establish the production-style repository baseline](../planning/tickets.md#m0-001)
+- [M0-002 — Build a configuration-driven training CLI](../planning/tickets.md#m0-002)
+- [M0-003 — Implement reproducible evaluation and inference commands](../planning/tickets.md#m0-003)
+- [M0-004 — Add automated verification and engineering documentation](../planning/tickets.md#m0-004)
+- [M0-005 — Run the engineering reproducibility gate](../planning/tickets.md#m0-005)
